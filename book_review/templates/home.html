@@ -1,0 +1,42 @@
+{% extends "layout.html" %}
+
+{% block content %}
+<div class="row">
+    <div class="col-md-8 mx-auto">
+        <h2 class="text-center">Welcome to book review</h2>
+        <p class="p-4">A platform where you can access, evaluate and write reviews about books. Simple as it could be. The goal of
+            this project was to go deepen in python web development with Flask framework.</p>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-md-12">
+            
+            <div class="card col-md-6 mx-auto">
+                <div class="card-body">
+                    <h5 class="card-title">Sign-in</h5>
+                    <p class="card-text">Sign-in with your email and password</p>
+                        
+                    <form action="">
+                        <div class="form-row">
+                            <label for="email">Email:</label>
+                            <input type="email" id="email" name="email" placeholder="Email" class="form-control">
+                        </div>
+                        <div class="form-row">
+                            <label for="password">Password:</label>
+                            <input type="password" id="password" name="password" placeholder="Password" class="form-control">
+                        </div>
+                        <div class="form-row pt-2">
+                            <button type="submit" class="btn btn-info w-100">Login</button>
+                        </div>
+                    </form>                    
+                </div>
+                <div class="card-body">
+                    <h5 class="card-title text-center pb-2">Or register, it's free</h5>
+                    <a href="{{ url_for('web.register') }}" class="btn btn-primary w-100">Register</a>
+                </div>
+                
+                
+                
+            </div>
+        </div>
+        {% endblock %}
